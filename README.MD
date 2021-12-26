@@ -1,6 +1,6 @@
 # PDF Template for Invoiceplane German DIN 5008 Form B
 
-This is an PDF-Template for [Invoiceplane](https://www.invoiceplane.com/) an open-source project for Invoice-Management.
+This is an PDF-Template for [Invoiceplane](https://www.invoiceplane.com/) a self-hosted open source application for managing your quotes, invoices, clients and payments.
 
 This Template is adopted from the original one with some minor changes:
 - Adds Faltmarken as described in [DIN 5008 / Form B](https://de.wikipedia.org/wiki/Datei:DIN_5008_Form_B.svg)
