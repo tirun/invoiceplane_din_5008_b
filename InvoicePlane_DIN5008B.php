@@ -18,7 +18,7 @@ body {
 }
 
 /* left space due to DIN 5008 2.5mm */
-main {
+main, footer {
     margin-left: 2.5mm;
 }
 
