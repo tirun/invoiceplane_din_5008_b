@@ -12,15 +12,25 @@ body {
   font-size: 12px;
 }
 
-/* color of Invoice Heading */
+/* color of Invoice Heading fixed */
 .invoice-title {
     color: #668100;
+}
+
+/* left space due to DIN 5008 2.5mm */
+main {
+    margin-left: 2.5mm;
+}
+
+/* reduces padding in item-table */
+table.item-table td {
+    padding: 5px 10px;
 }
 
 /* defines german DIN_5008_Form_B sichtbriefumschlag position */
 #client {
     position: absolute; 
-    top: 50mm;
+    top: 56mm;
     left: 20mm;
     width: 90mm;
 }
@@ -90,14 +100,14 @@ table.item-table {
 	}
 	if ($invoice->client_city || $invoice->client_state || $invoice->client_zip) {
 		echo '<div>';
+        if ($invoice->client_zip) {
+			echo htmlsc($invoice->client_zip) . ' ';
+		}
 		if ($invoice->client_city) {
 			echo htmlsc($invoice->client_city) . ' ';
 		}
 		if ($invoice->client_state) {
-			echo htmlsc($invoice->client_state) . ' ';
-		}
-		if ($invoice->client_zip) {
-			echo htmlsc($invoice->client_zip);
+			echo htmlsc($invoice->client_state);
 		}
 		echo '</div>';
 	}
@@ -136,14 +146,14 @@ table.item-table {
         }
         if ($invoice->user_city || $invoice->user_state || $invoice->user_zip) {
             echo '<div>';
+            if ($invoice->user_zip) {
+                echo htmlsc($invoice->user_zip) . ' ';
+            }
             if ($invoice->user_city) {
                 echo htmlsc($invoice->user_city) . ' ';
             }
             if ($invoice->user_state) {
-                echo htmlsc($invoice->user_state) . ' ';
-            }
-            if ($invoice->user_zip) {
-                echo htmlsc($invoice->user_zip);
+                echo htmlsc($invoice->user_state);
             }
             echo '</div>';
         }
