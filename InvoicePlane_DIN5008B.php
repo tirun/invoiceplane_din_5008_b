@@ -79,7 +79,7 @@ table.item-table {
 <div id="client">
 	<div id="sichtfenster-absender">
 		<?php 
-		   echo htmlsc($invoice->user_name) . ' - ' . htmlsc($invoice->user_address_1) . ' - ' . htmlsc($invoice->client_zip) . ' ' . htmlsc($invoice->client_city); 
+		   echo htmlsc($invoice->user_name) . ' - ' . htmlsc($invoice->user_address_1) . ' - ' . htmlsc($invoice->user_zip) . ' ' . htmlsc($invoice->user_city); 
 		?>
 		<hr />
 	</div>
